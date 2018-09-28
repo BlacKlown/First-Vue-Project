@@ -15,6 +15,7 @@ import Icons from './components/Icons'
 import Recommend from './components/Recommend'
 import Weekend from './components/Weekend'
 import axios from 'axios'
+
 export default {
   name: 'Home',
   components: {
