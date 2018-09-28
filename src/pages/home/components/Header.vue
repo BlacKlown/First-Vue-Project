@@ -2,13 +2,16 @@
 <div class="header">
   <div class="header-left"><div class="iconfont icon-back"></div></div>
   <div class="header-input"><i class="iconfont icon-select"></i>输入城市/景点/游玩主题</div>
-  <div class="header-right">城市<i class="iconfont icon-arrow"></i></div>
+  <div class="header-right">{{city}}<i class="iconfont icon-arrow"></i></div>
 </div>
 </template>
 
 <script>
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  props: {
+    city: String
+  }
 }
 </script>
 

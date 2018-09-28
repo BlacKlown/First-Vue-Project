@@ -16,58 +16,20 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      iconList: [{
-        id: '01',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-        imgDesc: '景点门票'
-      }, {
-        id: '02',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-        imgDesc: '北京必游'
-      }, {
-        id: '03',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-        imgDesc: '一日游'
-      }, {
-        id: '04',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png',
-        imgDesc: '文化古迹'
-      }, {
-        id: '05',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png',
-        imgDesc: '动植物园'
-      }, {
-        id: '06',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/6c/9e54a8540fee0102.png',
-        imgDesc: '故宫'
-      }, {
-        id: '07',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/47/c2b659e048b11602.png',
-        imgDesc: '野生动物园'
-      }, {
-        id: '08',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/ab/6f7d6e44963c9302.png',
-        imgDesc: '泡温泉'
-      }, {
-        id: '09',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png',
-        imgDesc: '游乐场'
-      }, {
-        id: '10',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/80/416c6ab3368d1f02.png',
-        imgDesc: '全部玩乐'
-      }],
       swiperOption: {
-
+        autoplay: false
       }
     }
   },
   computed: {
     pages () {
       var pages = []
-      this.iconList.forEach(function (item, index) {
+      this.list.forEach(function (item, index) {
         var page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []

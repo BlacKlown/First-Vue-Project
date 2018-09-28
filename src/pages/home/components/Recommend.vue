@@ -17,25 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      list: [{
-        id: '01',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1508/2f/e615bc3c8e0cf46d9fb92c58ac305f45.water.jpg_200x200_e4e69a48.jpg',
-        title: '世界公园',
-        desc: '40个国家的109处著名古迹名胜微缩景点'
-      }, {
-        id: '02',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/201308/08/41150dacc0e3a0c8c8d65eac.jpg_200x200_c62292e9.jpg',
-        title: '北京动物园',
-        desc: '百余种动物，让你离自然更近'
-      }, {
-        id: '03',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1501/c2/c212a154649088c1.water.jpg_200x200_69d1df69.jpg',
-        title: '水立方嬉水乐园',
-        desc: '魔幻水上世界，北京城永恒经典'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
