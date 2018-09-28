@@ -100,8 +100,8 @@ export default {
         img
           display: block
           margin: 0 auto
-          padding: .1rem
-          height: 90%
+          padding-top: .2rem
+          height: 80%
       .icon-desc
         position: absolute
         bottom: 0

@@ -39,5 +39,4 @@ export default {
       text-align: center
       .icon-arrow
         font-size: .24rem
-
 </style>
