@@ -10,7 +10,7 @@ import Header from './components/Header'
 export default {
   name: 'City',
   components: {
-    'city-header': Header,
+    'city-header': Header
   }
 }
 </script>
