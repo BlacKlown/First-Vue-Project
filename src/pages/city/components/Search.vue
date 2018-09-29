@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'HomeSearch'
+  name: 'CitySearch'
 }
 </script>
 
@@ -14,7 +14,7 @@ export default {
   @import '~css/reset.styl'
   div
     background-color: $headerColor
-    padding: .1rem
+    padding: 0 .1rem .1rem
     input
       box-sizing: border-box
       width: 100%
