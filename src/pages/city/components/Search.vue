@@ -1,7 +1,7 @@
 <template>
-<div>
-  <input type="text" placeholder="输入城市名或拼音">
-</div>
+  <div>
+    <input type="text" placeholder="输入城市名或拼音">
+  </div>
 </template>
 
 <script>

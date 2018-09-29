@@ -1,10 +1,10 @@
 <template>
-<div class="header">
-  <router-link to="/">
-    <div class="iconfont icon-back"></div>
-  </router-link>
-  <div class="header-text">城市选择</div>
-</div>
+  <div class="header">
+    <router-link to="/">
+      <div class="iconfont icon-back"></div>
+    </router-link>
+    <div class="header-text">城市选择</div>
+  </div>
 </template>
 
 <script>

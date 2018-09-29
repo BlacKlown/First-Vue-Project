@@ -1,79 +1,84 @@
 <template>
-<div class="list">
-  <div class="area">
-    <div class="title border-topbottom">当前城市</div>
-    <div class="btn-list">
-      <div class="btn-wapper">
-        <div class="btn">北京</div>
+  <div class="list">
+    <div>
+      <div class="area">
+        <div class="title border-topbottom">当前城市</div>
+        <div class="btn-list">
+          <div class="btn-wrapper">
+            <div class="btn">北京</div>
+          </div>
+        </div>
+      </div>
+      <div class="area">
+        <div class="title border-topbottom">热门城市</div>
+        <div class="btn-list">
+          <div class="btn-wrapper">
+            <div class="btn">北京</div>
+          </div>
+          <div class="btn-wrapper">
+            <div class="btn">北京</div>
+          </div>
+          <div class="btn-wrapper">
+            <div class="btn">北京</div>
+          </div>
+          <div class="btn-wrapper">
+            <div class="btn">北京</div>
+          </div>
+          <div class="btn-wrapper">
+            <div class="btn">北京</div>
+          </div>
+          <div class="btn-wrapper">
+            <div class="btn">北京</div>
+          </div>
+          <div class="btn-wrapper">
+            <div class="btn">北京</div>
+          </div>
+          <div class="btn-wrapper">
+            <div class="btn">北京</div>
+          </div>
+        </div>
+      </div>
+      <div class="area">
+        <div class="title border-topbottom">A</div>
+        <ul class="item-list">
+          <li class="item border-bottom">北京</li>
+          <li class="item border-bottom">北京</li>
+          <li class="item border-bottom">北京</li>
+          <li class="item border-bottom">北京</li>
+          <li class="item border-bottom">北京</li>
+        </ul>
+      </div>
+      <div class="area">
+        <div class="title border-topbottom">A</div>
+        <ul class="item-list">
+          <li class="item border-bottom">北京</li>
+          <li class="item border-bottom">北京</li>
+          <li class="item border-bottom">北京</li>
+          <li class="item border-bottom">北京</li>
+          <li class="item border-bottom">北京</li>
+        </ul>
+      </div>
+      <div class="area">
+        <div class="title border-topbottom">A</div>
+        <ul class="item-list">
+          <li class="item border-bottom">北京</li>
+          <li class="item border-bottom">北京</li>
+          <li class="item border-bottom">北京</li>
+          <li class="item border-bottom">北京</li>
+          <li class="item border-bottom">北京</li>
+        </ul>
       </div>
     </div>
   </div>
-  <div class="area">
-    <div class="title border-topbottom">热门城市</div>
-    <div class="btn-list">
-      <div class="btn-wapper">
-        <div class="btn">北京</div>
-      </div>
-      <div class="btn-wapper">
-        <div class="btn">北京</div>
-      </div>
-      <div class="btn-wapper">
-        <div class="btn">北京</div>
-      </div>
-      <div class="btn-wapper">
-        <div class="btn">北京</div>
-      </div>
-      <div class="btn-wapper">
-        <div class="btn">北京</div>
-      </div>
-      <div class="btn-wapper">
-        <div class="btn">北京</div>
-      </div>
-      <div class="btn-wapper">
-        <div class="btn">北京</div>
-      </div>
-      <div class="btn-wapper">
-        <div class="btn">北京</div>
-      </div>
-    </div>
-  </div>
-  <div class="area">
-    <div class="title border-topbottom">A</div>
-    <ul class="item-list">
-      <li class="item border-bottom">北京</li>
-      <li class="item border-bottom">北京</li>
-      <li class="item border-bottom">北京</li>
-      <li class="item border-bottom">北京</li>
-      <li class="item border-bottom">北京</li>
-    </ul>
-  </div>
-  <div class="area">
-    <div class="title border-topbottom">A</div>
-    <ul class="item-list">
-      <li class="item border-bottom">北京</li>
-      <li class="item border-bottom">北京</li>
-      <li class="item border-bottom">北京</li>
-      <li class="item border-bottom">北京</li>
-      <li class="item border-bottom">北京</li>
-    </ul>
-  </div>
-  <div class="area">
-    <div class="title border-topbottom">A</div>
-    <ul class="item-list">
-      <li class="item border-bottom">北京</li>
-      <li class="item border-bottom">北京</li>
-      <li class="item border-bottom">北京</li>
-      <li class="item border-bottom">北京</li>
-      <li class="item border-bottom">北京</li>
-    </ul>
-  </div>
-
-</div>
 </template>
 
 <script>
+import BScroll from 'better-scroll'
 export default {
-  name: 'CityList'
+  name: 'CityList',
+  mounted () {
+    this.scroll = new BScroll('.list')
+  }
 }
 </script>
 
@@ -97,7 +102,7 @@ export default {
     .btn-list
       overflow: hidden
       padding: .1rem .5rem .1rem .1rem
-      .btn-wapper
+      .btn-wrapper
         float: left
         width: 33.33%
         .btn
