@@ -23,7 +23,8 @@ export default {
   data () {
     return {
       touchStatus: false,
-      timer: null
+      timer: null,
+      defaultY: 0
     }
   },
   computed: {
@@ -33,9 +34,6 @@ export default {
         letters.push(i)
       }
       return letters
-    },
-    defaultY () {
-      return this.$refs['A'][0].offsetTop
     }
   },
   methods: {
@@ -62,6 +60,9 @@ export default {
     handleTouchEnd () {
       this.touchStatus = false
     }
+  },
+  updated () {
+    this.defaultY = this.$refs['A'][0].offsetTop
   }
 }
 </script>
