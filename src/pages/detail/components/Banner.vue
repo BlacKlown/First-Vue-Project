@@ -10,16 +10,20 @@
         </div>
       </div>
     </div>
-    <gallary
-      v-if="show"
-      @gallaryClick="handleBannerClick"
-      :bannerImgs="bannerImgs"
-    ></gallary>
+    <fade>
+      <gallary
+        v-if="show"
+        @gallaryClick="handleBannerClick"
+        :bannerImgs="bannerImgs"
+      ></gallary>
+    </fade>
   </div>
 </template>
 
 <script>
 import Gallary from '@/common/gallary/Gallary'
+import Fade from '@/common/fade/Fade'
+
 export default {
   name: 'Banner',
   props: {
@@ -33,7 +37,8 @@ export default {
     }
   },
   components: {
-    'gallary': Gallary
+    'gallary': Gallary,
+    'fade': Fade
   },
   methods: {
     handleBannerClick () {
