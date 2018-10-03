@@ -1,16 +1,20 @@
 <template>
   <div>
     <div class="banner-wrapper" @click="handleBannerClick">
-      <img src="http://img1.qunarzz.com/sight/p0/1508/2f/e615bc3c8e0cf46d9fb92c58ac305f45.water.jpg_600x330_17d7bacd.jpg">
+      <img :src="bannerImg">
       <div class="banner-info">
-        <div class="banner-title">世界公园(AAAA景区)</div>
+        <div class="banner-title">{{bannerTitle}}</div>
         <div class="banner-number">
           <i class="iconfont icon-pic"></i>
-          2
+          {{bannerImgs.length}}
         </div>
       </div>
     </div>
-    <gallary v-if="show" @gallaryClick="handleBannerClick"></gallary>
+    <gallary
+      v-if="show"
+      @gallaryClick="handleBannerClick"
+      :bannerImgs="bannerImgs"
+    ></gallary>
   </div>
 </template>
 
@@ -18,6 +22,11 @@
 import Gallary from '@/common/gallary/Gallary'
 export default {
   name: 'Banner',
+  props: {
+    bannerImg: String,
+    bannerTitle: String,
+    bannerImgs: Array
+  },
   data () {
     return {
       show: false

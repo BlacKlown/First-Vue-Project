@@ -38,5 +38,5 @@ export default {
       background: url(http://s.qunarzz.com/piao/image/touch/sight/detail.png) 0 -.45rem no-repeat
       background-size: .4rem 3rem
   .item-children
-    padding: 0 .2rem 
+    padding: 0 .2rem
 </style>

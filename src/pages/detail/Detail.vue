@@ -1,11 +1,17 @@
 <template>
   <div>
-    <detail-banner></detail-banner>
+    <detail-banner
+      :bannerImg="bannerImg"
+      :bannerTitle="bannerTitle"
+      :bannerImgs="bannerImgs"
+    ></detail-banner>
     <detail-header></detail-header>
     <div class="content">
       <detail-list :list="List"></detail-list>
     </div>
-    <div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+    <div>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
   </div>
 </template>
 
@@ -13,6 +19,7 @@
 import Banner from './components/Banner'
 import Header from './components/Header'
 import List from './components/List'
+import axios from 'axios'
 
 export default {
   name: 'Detail',
@@ -23,26 +30,32 @@ export default {
   },
   data () {
     return {
-      List: [{
-        title: '成人票',
-        children: [{
-          title: '[日场]门票（预定）',
-          children: [{
-            title: '世界公园门票（文惠券产品）'
-          }, {
-            title: '世界公园成人票(提前订优惠)'
-          }]
-        }, {
-          title: '[日场]门票(当天)'
-        }]
-      }, {
-        title: '学生票'
-      }, {
-        title: '儿童票'
-      }, {
-        title: '特价票'
-      }]
+      bannerImg: '',
+      bannerTitle: '',
+      bannerImgs: [],
+      List: []
     }
+  },
+  methods: {
+    getDatailInfo () {
+      axios.get('/api/detail.json', {
+        params: {
+          id: this.$route.params.id
+        }
+      }).then(this.getDatailInfoSucc)
+    },
+    getDatailInfoSucc (res) {
+      if (res.data.ret && res.data.data) {
+        var data = res.data.data
+        this.bannerImg = data.bannerImg
+        this.bannerTitle = data.bannerTitle
+        this.bannerImgs = data.bannerImgs
+        this.List = data.detailList
+      }
+    }
+  },
+  mounted () {
+    this.getDatailInfo()
   }
 }
 </script>
