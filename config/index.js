@@ -12,9 +12,10 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
         '/api': {
-            target: 'http://localhost:8080',
+            target: 'http://localhost',
             pathRewrite: {
-                '^/api': 'static/mock'
+                // '^/api': 'static/mock'
+                '^/api': '/travel/api'
             }
         }
     },
@@ -57,7 +58,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: '/travel',
 
     /**
      * Source Maps
