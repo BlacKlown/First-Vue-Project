@@ -9,9 +9,7 @@
       </router-link>
       <div class="detail-header-title">景点信息</div>
     </div>
-    <div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
   </div>
-
 </template>
 
 <script>
@@ -63,6 +61,7 @@ export default {
     .iconfont
       font-size: .4rem
   .detail-header-fixed
+    z-index: 2
     position: fixed
     top: 0
     left: 0
