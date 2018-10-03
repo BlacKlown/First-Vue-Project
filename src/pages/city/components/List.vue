@@ -54,7 +54,7 @@ export default {
     })
   },
   mounted () {
-    this.scroll = new BScroll('.list')
+    this.scroll = new BScroll('.list', {click: true})
   },
   watch: {
     letter () {
